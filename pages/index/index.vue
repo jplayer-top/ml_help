@@ -1,7 +1,6 @@
 <template>
 		<view class="bg" >
 			<view :style="'height:'+ screenHeight +'px !important; '" >
-				<a href="jplayer://helploading?id=10000">open android app</a>
 				<image @click="onApp" mode="widthFix" src="../../static/pic.png" style="width: 80%; margin-left: 10%; margin-top: 30%;"></image>
 			</view>
 		
@@ -17,6 +16,7 @@
 	export default {
 		data() {
 			return {
+				shortId:'',
 				screenHeight:0,
 				showMaskWx:false,
 				title: 'Hello'
@@ -26,11 +26,20 @@
 			this.screenHeight = uni.getSystemInfoSync().windowHeight;
 			this.showMaskWx =this.isWeiXin()
 			console.log(this.showMaskWx,'------------')
-			
+			this.shortId = this.getUrlParam('shortId');
 		},
 		methods: {
+			getUrlParam(name) {
+			  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			  var r = location.href.split("?")[1].match(reg);  //匹配目标参数
+			  if (r != null) return decodeURI(r[2]); return null; //返回参数值
+			},
 			onApp(){
-				window.location = 'jplayer://helploading?id=10000';
+				// uni.showToast({
+				// 	duration:2000,
+				// 	title:this.shortId
+				// })
+				window.location = 'jplayer://helploading?shortId=' + this.shortId;
 			},
 			isWeiXin() {
 				var ua = window.navigator.userAgent.toLowerCase();
