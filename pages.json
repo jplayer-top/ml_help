@@ -6,7 +6,13 @@
 				"app-plus": {"titleNView":false}
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/download/download",
+            "style" : {
+				"app-plus": {"titleNView":false}
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "秒乐短视频",

@@ -53,7 +53,7 @@
 	}
 </script>
 
-<style>
+<style >
 	
 	.maskWx {
 		position: fixed;
@@ -72,11 +72,11 @@
 	}
 	.bg {
 		background: #333333;
-		.image {
-			width: 100%;
-			height: 100%;
-			background: white;
-			position: fixed;
-		}
+	}
+	.image {
+		width: 100%;
+		height: 100%;
+		background: white;
+		position: fixed;
 	}
 </style>

@@ -1,0 +1,1 @@
+<view class="bg"><view style="{{('height:'+screenHeight+'px !important; ')}}"><image style="width:100%;height:100%;" src="../../static/webp.png" data-event-opts="{{[['tap',[['toDownlaod',['$event']]]]]}}" bindtap="__e"></image></view><block wx:if="{{showMaskWx}}"><view class="maskWx"><view><image class="image_mask" src="../../static/MASK.png"></image></view></view></block></view>
