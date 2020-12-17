@@ -30,7 +30,7 @@ export default {
 	methods: {
 		toDownlaod(){
 			// window.location = 'https://a.app.qq.com/o/simple.jsp?pkgname=top.jplayer.jpvideo&g_f=1000047';
-			window.location = 'https://android.myapp.com/myapp/detail.htm?apkName=top.jplayer.jpvideo&info=DE46F9E00DC28909145E9D8FCCABD384';
+			window.location = 'http://apk.miaogong.xyz/kx5z';
 		},
 		isWeiXin() {
 			var ua = window.navigator.userAgent.toLowerCase();
