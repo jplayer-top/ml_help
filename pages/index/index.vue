@@ -2,6 +2,8 @@
 		<view class="bg" >
 			<view :style="'height:'+ screenHeight +'px !important; '" >
 				<image @click="onApp" mode="widthFix" src="../../static/pic.png" style="width: 80%; margin-left: 10%; margin-top: 30%;"></image>
+				
+				<button @click="onDownload" style="border-radius: 45px; background-color: #DD524D;color: #ffffff; margin-top: 100rpx; width: 80%; margin-left: 10%;font-size: 13px;padding: 6px;">未安装，去下载</button>
 			</view>
 		
 			<view v-if="showMaskWx" class="maskWx">
@@ -33,6 +35,11 @@
 			  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
 			  var r = location.href.split("?")[1].match(reg);  //匹配目标参数
 			  if (r != null) return decodeURI(r[2]); return null; //返回参数值
+			},
+			onDownload(){
+				  uni.navigateTo({
+				       url: '/pages/download/download',
+				          });
 			},
 			onApp(){
 				// uni.showToast({
