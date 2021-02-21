@@ -24,6 +24,12 @@
             	"app-plus": {"titleNView":false}
             }
         }
+		,{
+		    "path" : "pages/index/vipgoods",
+		    "style": {
+		    	"app-plus": {"titleNView":false}
+		    }
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
